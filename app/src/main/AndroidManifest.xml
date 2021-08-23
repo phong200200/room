@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.contentproviderwithroom">
-
+    <permission android:name="com.example.myrule" android:protectionLevel="normal"/>
+    <permission android:name="com.example.myrule" android:protectionLevel="normal"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +23,8 @@
             android:name="com.example.contentproviderwithroom.ContentProvider.SampleContentProvider"
             android:authorities="com.example.contentproviderwithroom.ContentProvider"
             android:exported="true"
-            android:permission="com.example.android.samplecontentprovider.provider.READ_WRITE"/>
+            android:readPermission="com.example.myrule"
+            android:writePermission="com.example.myrule"/>
     </application>
 
 </manifest>
